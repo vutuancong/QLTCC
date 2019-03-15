@@ -19,6 +19,7 @@ public class ThuChiFragment extends Fragment {
     private TextView textView;
     private ImageView anhMuc;
     private LinearLayout chonHangMucChi;
+    private ImageView imgToRight;
     @Nullable
     @Override
 
@@ -27,6 +28,7 @@ public class ThuChiFragment extends Fragment {
         anhMuc = view.findViewById(R.id.anhMuc);
         chonHangMucChi = view.findViewById(R.id.chonHangMucChi);
         textView = view.findViewById(R.id.chonmuc);
+        imgToRight = view.findViewById(R.id.imgToRight);
         Bundle bundle = getArguments();
         if (bundle != null){
             String str = bundle.getString("key");
@@ -44,6 +46,16 @@ public class ThuChiFragment extends Fragment {
                 transaction.commit();
             }
 
+        });
+        imgToRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HangMucThuFragment hangMucThuFragment = new HangMucThuFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment_container,hangMucThuFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
         });
         return view;
 
