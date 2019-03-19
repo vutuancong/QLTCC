@@ -15,18 +15,63 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp">
-        <!--<Spinner-->
-            <!--android:id="@+id/spiner"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent">-->
-        <!--</Spinner>-->
-        <TextView
-            android:gravity="center"
-            android:textSize="20dp"
-            android:textColor="@color/background_child"
-            android:text="Chi tiền"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/background_child"
+                        android:textSize="25dp"
+                        android:text="Chi tiền"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/toRight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/chevron_right_26px" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:gravity="right"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/checkmark_50px"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
@@ -81,26 +126,40 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2">
+                    <LinearLayout
+                        android:layout_weight="1.7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/chiTien"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textColor="@color/chitien"
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
 
-                    <EditText
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
 
-                        android:layout_width="361dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@null"
-                        android:gravity="right"
-                        android:text="0"
-                        android:textColor="@color/chitien"
-                        android:textSize="30dp"
-                        android:textStyle="bold" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="15dp"
+                            android:text="đ"
+                            android:textSize="25dp" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="10dp"
-                        android:text="đ"
-                        android:textSize="20dp" />
+
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -138,7 +197,7 @@
 
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1.7">
+                        android:layout_weight="1.5">
 
                         <TextView
                             android:id="@+id/chonmuc"
@@ -149,6 +208,12 @@
                             android:text="Chọn hạng mục"
                             android:textSize="25dp" />
 
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="0.2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
                         <ImageView
                             android:id="@+id/btnChonMuc"
                             android:layout_width="30dp"
@@ -156,7 +221,6 @@
                             android:layout_gravity="center"
                             android:src="@drawable/chevron_right_50px" />
                     </LinearLayout>
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -185,6 +249,7 @@
                         android:layout_weight="1.7">
 
                         <EditText
+                            android:id="@+id/dienGiai"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -219,13 +284,33 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1.7">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Hôm nay -10/03/2019 22:56"
-                            android:textColor="@color/title_text"
-                            android:textSize="20dp" />
+
+                        <LinearLayout
+                            android:layout_weight="1.3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/ngay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Hôm nay -10/03/2019"
+                                android:textColor="@color/title_text"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="0.4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/gio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="13:33"
+                                android:textColor="@color/title_text"
+                                android:textSize="20dp" />
+                        </LinearLayout>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -299,6 +384,7 @@
                         android:layout_weight="1.7">
 
                         <EditText
+                            android:id="@+id/chuyenDi"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:hint="Chuyến đi/Sự kiện"
@@ -331,6 +417,7 @@
                         android:layout_weight="1.7">
 
                         <EditText
+                            android:id="@+id/chiChoAi"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:hint="Chi cho ai"
@@ -362,6 +449,7 @@
                         android:layout_weight="1.7">
 
                         <EditText
+                            android:id="@+id/diaDiem"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:hint="Địa điểm"

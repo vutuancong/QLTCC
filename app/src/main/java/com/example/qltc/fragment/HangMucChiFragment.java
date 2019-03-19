@@ -1,7 +1,5 @@
 package com.example.qltc.fragment;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.qltc.R;
 import com.example.qltc.adapter.HangMucChiTienAdapter;
@@ -35,21 +32,21 @@ public class HangMucChiFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_item_chi, container, false);
         getData();
         listView = view.findViewById(R.id.lvChiTieu);
-        adapter = new HangMucChiTienAdapter(getContext(), R.layout.fragment_hang_muc_chi_tien, chiTienArrayList);
+        adapter = new HangMucChiTienAdapter(getContext(), R.layout.fragment_hang_muc_thu_chi, chiTienArrayList);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                Bundle bundle = new Bundle();
-               ThuChiFragment thuChiFragment = new ThuChiFragment();
+               ChiTienFragment chiTienFragment = new ChiTienFragment();
                bundle.putString("key",chiTienArrayList.get(position).getTen().toString());
                bundle.putInt("anh",chiTienArrayList.get(position).getHinh());
-               thuChiFragment.setArguments(bundle);
+               chiTienFragment.setArguments(bundle);
 
 
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, thuChiFragment);
+                transaction.replace(R.id.fragment_container, chiTienFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
 

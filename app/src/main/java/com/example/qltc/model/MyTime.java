@@ -7,14 +7,33 @@ public class MyTime {
     private long timeMilis;
     private String ngayThangNam;
     private String timeFull;
+    private String myTime;
+    private String myCurrentTime;
+    public String getMyTime() {
+        return myTime;
+    }
 
-    public MyTime(int fd, int fm, int fh, long timeMilis, String ngayThangNam, String timeFull) {
+    public void setMyTime(String myTime) {
+        this.myTime = myTime;
+    }
+
+    public String getMyCurrentTime() {
+        return myCurrentTime;
+    }
+
+    public void setMyCurrentTime(String myCurrentTime) {
+        this.myCurrentTime = myCurrentTime;
+    }
+
+    public MyTime(int fd, int fm, int fh, long timeMilis, String ngayThangNam, String timeFull, String myTime, String myCurrentTime) {
         this.fd = fd;
         this.fm = fm;
         this.fh = fh;
         this.timeMilis = timeMilis;
         this.ngayThangNam = ngayThangNam;
         this.timeFull = timeFull;
+        this.myTime = myTime;
+        this.myCurrentTime = myCurrentTime;
     }
 
     public int getFd() {

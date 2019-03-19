@@ -12,4 +12,8 @@
         <item name="actionMenuTextColor">@color/color_toolbar_icon</item>
         ...
     </style>
+    <style name="DatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+
+        <item name="colorAccent">@color/positive_money</item>
+    </style>
 </resources>
