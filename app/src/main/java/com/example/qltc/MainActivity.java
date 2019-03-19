@@ -20,6 +20,7 @@ import com.example.qltc.fragment.TongQuanFragment;
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
+    int x;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
