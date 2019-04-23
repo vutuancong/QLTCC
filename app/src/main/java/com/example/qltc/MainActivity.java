@@ -8,10 +8,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.example.qltc.fragment.GhiChepMauFragment;
 import com.example.qltc.fragment.HanMucChiFragment;
+import com.example.qltc.fragment.HangMucChiFragment;
 import com.example.qltc.fragment.KhacFragment;
 import com.example.qltc.fragment.TaiKhoanFragment;
 import com.example.qltc.fragment.ChiTienFragment;
+import com.example.qltc.fragment.ThemGhiChepMauFragment;
 import com.example.qltc.fragment.TongQuanFragment;
 
 
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     selectedFragment = new TongQuanFragment();
                     break;
                 case R.id.nav_account:
-                    selectedFragment = new TaiKhoanFragment();
+                    selectedFragment = new GhiChepMauFragment();
                     break;
                 case R.id.nav_plus:
                     selectedFragment = new ChiTienFragment();

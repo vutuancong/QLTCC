@@ -14,4 +14,6 @@
     <color name="color_toolbar_icon">#FFFFFF</color>
     <color name="chitien">#FF0000</color>
     <color name="thu_tien">#32E639</color>
+    <color name="thuTien">#25E206</color>
+    <color name="chiTien">#FF092D</color>
 </resources>

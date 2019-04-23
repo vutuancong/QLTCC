@@ -25,7 +25,6 @@ public class HangMucChiTienAdapter extends BaseAdapter {
         this.listHangMucChiTieu = listHangMucChiTieu;
     }
 
-
     @Override
     public int getCount() {
         return listHangMucChiTieu.size();

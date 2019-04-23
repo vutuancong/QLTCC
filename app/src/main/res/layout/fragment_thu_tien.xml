@@ -63,6 +63,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/btnTich"
                     android:layout_marginRight="20dp"
                     android:src="@drawable/checkmark_50px"
                     android:layout_width="50dp"
@@ -463,6 +464,7 @@
                 android:layout_marginTop="10dp">
 
                 <Button
+                    android:id="@+id/btnGhi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/positive_money"

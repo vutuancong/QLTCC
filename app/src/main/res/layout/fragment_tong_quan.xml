@@ -80,7 +80,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
                         android:gravity="center"
-                        android:text="43894839$"
+                        android:text="43894839đ"
                         android:textColor="@color/color_money"
                         android:textSize="25dp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +158,96 @@
                             android:layout_marginTop="10dp"
                             android:layout_weight="2"
                             android:orientation="vertical">
-
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp">
+                                <LinearLayout
+                                    android:layout_weight="0.2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:textColor="@color/title_text"
+                                        android:gravity="center"
+                                        android:textSize="15dp"
+                                        android:text="Thu"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="0.8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:textSize="15dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/thuTien"
+                                        android:text="2000000"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp">
+                                <LinearLayout
+                                    android:layout_weight="0.2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:textColor="@color/title_text"
+                                        android:gravity="center"
+                                        android:textSize="15dp"
+                                        android:text="Chi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="0.8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:textSize="15dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/chiTien"
+                                        android:text="2000000"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp">
+                                <LinearLayout
+                                    android:layout_weight="0.2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:textColor="@color/title_text"
+                                        android:gravity="center"
+                                        android:textSize="15dp"
+                                        android:text="Tổng"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="0.8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:textSize="15dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/title_text"
+                                        android:text="2000000"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+                            </LinearLayout>
 
                         </LinearLayout>
                     </LinearLayout>
@@ -388,6 +477,7 @@
                         android:layout_weight="1">
 
                         <TextView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="8dp"

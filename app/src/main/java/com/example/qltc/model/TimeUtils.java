@@ -11,6 +11,10 @@ public class TimeUtils {
     SimpleDateFormat FULL = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     SimpleDateFormat MyTime = new SimpleDateFormat("dd/MM/yyyy");
     SimpleDateFormat MyCurrentTime = new SimpleDateFormat("HH:mm");
+    SimpleDateFormat ddMM = new SimpleDateFormat("dd/MM");
+
+
+
     public MyTime getTime() {
         MyTime hitexTime = new MyTime();
         Date date = new Date();
@@ -21,6 +25,7 @@ public class TimeUtils {
         hitexTime.setTimeMilis(date.getTime());
         hitexTime.setMyTime(MyTime.format(date));
         hitexTime.setMyCurrentTime(MyCurrentTime.format(date));
+        hitexTime.setDdMM(ddMM.format(date));
 
         return hitexTime;
     }

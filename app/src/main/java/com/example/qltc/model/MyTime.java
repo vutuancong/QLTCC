@@ -9,9 +9,20 @@ public class MyTime {
     private String timeFull;
     private String myTime;
     private String myCurrentTime;
+    private String ddMM;
+
+    public String getDdMM() {
+        return ddMM;
+    }
+
+    public void setDdMM(String ddMM) {
+        this.ddMM = ddMM;
+    }
+
     public String getMyTime() {
         return myTime;
     }
+
 
     public void setMyTime(String myTime) {
         this.myTime = myTime;
